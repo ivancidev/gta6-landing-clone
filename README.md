@@ -1,48 +1,95 @@
-# Astro Starter Kit: Basics
+# 🎮 GTA VI Landing Page Clone
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+Una réplica de la landing page oficial de Grand Theft Auto VI (GTA VI) desarrollada con Astro y React.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+[![GTA VI Landing Page Clone](https://i.postimg.cc/Znxd4NbR/Captura-de-pantalla-2025-05-13-122132.png)](https://postimg.cc/GT92jHsw)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Este proyecto es una recreación fiel de la página de presentación del próximo juego de Rockstar Games, utilizando tecnologías modernas como Astro, React, GSAP para animaciones y Lenis para el efecto de scroll suave.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## ✨ Características
 
-## 🚀 Project Structure
+- 🚀 Desarrollado con Astro para un rendimiento óptimo
+- ⚛️ Componentes interactivos con React
+- 🎭 Animaciones avanzadas con GSAP
+- 📱 Diseño responsivo para cualquier dispositivo
+- 🖼️ Réplica fiel de la estética y experiencia de usuario de Rockstar Games
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🚀 Estructura del Proyecto
+
+El proyecto está organizado de la siguiente manera:
 
 ```text
 /
-├── public/
-│   └── favicon.svg
+├── public/                  # Archivos estáticos
+│   ├── favicon.svg
+│   ├── fondo-menu.png       # Fondo del menú desplegable
+│   ├── fondo-original.png   # Imagen de fondo principal
+│   ├── hero-gt6-sin-fondo.png # Personajes principales sin fondo
+│   ├── rockstar-logo.svg    # Logo de Rockstar Games
+│   ├── vi.webp              # Logo del VI animado
+│   └── fonts/               # Fuentes personalizadas
+│       └── Pricedown Bl.otf # Fuente similar a la de GTA
 ├── src/
+│   ├── assets/              # Recursos internos
+│   ├── components/          # Componentes de la aplicación
+│   │   ├── Hero.astro       # Componente principal de la landing
+│   │   ├── HeroAnimation.tsx # Animaciones del héroe con GSAP
+│   │   └── MenuAnimation.tsx # Animaciones del menú con GSAP
 │   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   │   └── Layout.astro     # Plantilla principal de la página
+│   ├── pages/
+│   │   └── index.astro      # Página principal
+│   └── styles/              # Estilos globales
+│       └── global.css       # Estilos CSS globales
+└── package.json             # Dependencias y scripts
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Esta estructura facilita la organización del código y la separación de responsabilidades entre componentes.
 
-## 🧞 Commands
+## 🧞 Comandos
 
-All commands are run from the root of the project, from a terminal:
+Todos los comandos se ejecutan desde la raíz del proyecto:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+| Comando        | Acción                                            |
+| :------------- | :------------------------------------------------ |
+| `pnpm install` | Instala dependencias                              |
+| `pnpm dev`     | Inicia servidor de desarrollo en `localhost:4321` |
+| `pnpm build`   | Construye el sitio para producción en `./dist/`   |
+| `pnpm preview` | Previsualiza la build antes de desplegar          |
 
-## 👀 Want to learn more?
+## 💻 Tecnologías Utilizadas
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- [Astro](https://astro.build/) - Framework web de alto rendimiento
+- [React](https://reactjs.org/) - Biblioteca para interfaces de usuario
+- [GSAP](https://greensock.com/gsap/) - Animaciones profesionales
+- [Lenis](https://github.com/studio-freight/lenis) - Scroll suave
+- [TypeScript](https://www.typescriptlang.org/) - JavaScript tipado
+
+## 📱 Capturas de Pantalla
+
+
+
+## 🚀 Instalación y Uso
+
+1. Clona este repositorio
+
+   ```sh
+   git clone https://github.com/ivancidev/gta6-landing-clone.git
+   cd gta6-landing-clone
+   ```
+
+2. Instala las dependencias
+
+   ```sh
+   pnpm install
+   ```
+
+3. Inicia el servidor de desarrollo
+
+   ```sh
+   pnpm dev
+   ```
+
+4. Abre [http://localhost:4321](http://localhost:4321) en tu navegador
+
+
