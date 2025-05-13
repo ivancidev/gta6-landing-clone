@@ -1,7 +1,7 @@
 ---
 import HeroAnimation from './HeroAnimation';
-import MenuAnimation from './MenuAnimation';
 import '../styles/global.css';
+import '../styles/hero.css';
 ---
 
 <div class="header">
@@ -17,8 +17,8 @@ import '../styles/global.css';
     <img src="/fondo-original.png" class="background-image" alt="Background image GTA6">
     <img src="/hero-gt6-sin-fondo.png" class="characters-image" alt="GTA VI characters">
     <div class="reveal-text">
-  grand<br><span class="theft-offset">theft</span><br><span class="auto-offset">auto</span>
-</div>       
+      grand<br><span class="theft-offset">theft</span><br><span class="auto-offset">auto</span>
+    </div>       
     <div class="text-background"></div>    
     <div class="text-mask-container">      
       <div class="text-mask-wrapper">        
@@ -26,7 +26,7 @@ import '../styles/global.css';
           <div class="text-mask">grand<br><span class="the-highlight theft-offset">theft</span><br><span class="auto-offset">auto</span></div>
           <div class="date-mask-container">
             <div class="release-date">
-              DISPONIBLE<br>EL 26 DE MAYO<br>DE 2026
+              Disponible<br>el 26 de mayo<br>de 2026
             </div>
           </div>
         </div>
@@ -35,17 +35,11 @@ import '../styles/global.css';
     
     <div class="vi-logo-animated-container">
       <img src="/vi.webp" alt="GTA VI Logo" class="vi-logo-animated">
-    </div>
-      <div class="trailer-button-container">
+    </div>      <div class="trailer-button-container">
       <a href="#" class="trailer-button">
         <div class="trailer-svg-container">
-          <svg aria-hidden="true" fill="none" width="100" height="100" viewBox="0 0 199 132" xmlns="http://www.w3.org/2000/svg" focusable="false">
-            <path d="M26.4874 45.0876L6.73309 4.22697H41.7481L59.9601 43.9604L60.4792 45.0876H67.1233L67.6423 43.9753L85.9433 4.22697H120.973L101.189 45.0876H105.876L127.706 0H83.2293L63.8012 42.2103L44.4621 0H0L21.801 45.0876H26.4874Z" fill="currentColor"></path>
-            <path d="M84.9965 78.5314L63.8184 122.299L42.6552 78.5314H37.9687L63.8184 131.999L89.6978 78.5314H84.9965Z" fill="currentColor"></path>
-            <path d="M134.945 45.0876V4.12315H171.176V45.0876H175.299V0H130.822V45.0876H134.945Z" fill="currentColor"></path>
-            <path d="M171.176 78.5314V127.876H134.945V78.5314H130.822V131.999H175.299V78.5314H171.176Z" fill="currentColor"></path>
-          </svg>
-          <span class="trailer-text">VER EL TRAILER 2</span>
+          <img src="/trailer-logo.svg" alt="Trailer Logo" width="120" height="120" class="trailer-svg-image" />
+          <span class="trailer-text">Ver el trailer 2</span>
         </div>
       </a>
     </div>
@@ -54,4 +48,3 @@ import '../styles/global.css';
 </div>
 
 <HeroAnimation client:load />
-<MenuAnimation client:load />
