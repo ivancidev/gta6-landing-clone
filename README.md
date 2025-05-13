@@ -2,9 +2,9 @@
 
 Una réplica de la landing page oficial de Grand Theft Auto VI (GTA VI) desarrollada con Astro y React.
 
-[![GTA VI Landing Page Clone](https://i.postimg.cc/Znxd4NbR/Captura-de-pantalla-2025-05-13-122132.png)](https://postimg.cc/GT92jHsw)
+[![GTA VI Landing Page Clone](https://i.postimg.cc/XNK32rgs/Captura-de-pantalla-2025-05-13-164819.png)](https://postimg.cc/CdKW5LX8)
 
-Este proyecto es una recreación fiel de la página de presentación del próximo juego de Rockstar Games, utilizando tecnologías modernas como Astro, React, GSAP para animaciones y Lenis para el efecto de scroll suave.
+Este proyecto es una recreación de la página de presentación del próximo juego de Rockstar Games, utilizando tecnologías modernas como Astro, React, GSAP para animaciones y Lenis para el efecto de scroll suave.
 
 ## ✨ Características
 
@@ -26,6 +26,7 @@ El proyecto está organizado de la siguiente manera:
 │   ├── fondo-original.png   # Imagen de fondo principal
 │   ├── hero-gt6-sin-fondo.png # Personajes principales sin fondo
 │   ├── rockstar-logo.svg    # Logo de Rockstar Games
+│   ├── trailer-logo.svg     # Icono del botón de trailer
 │   ├── vi.webp              # Logo del VI animado
 │   └── fonts/               # Fuentes personalizadas
 │       └── Pricedown Bl.otf # Fuente similar a la de GTA
@@ -33,18 +34,19 @@ El proyecto está organizado de la siguiente manera:
 │   ├── assets/              # Recursos internos
 │   ├── components/          # Componentes de la aplicación
 │   │   ├── Hero.astro       # Componente principal de la landing
+│   │   ├── Menu.astro       # Estructura del menú desplegable
 │   │   ├── HeroAnimation.tsx # Animaciones del héroe con GSAP
 │   │   └── MenuAnimation.tsx # Animaciones del menú con GSAP
 │   ├── layouts/
 │   │   └── Layout.astro     # Plantilla principal de la página
 │   ├── pages/
 │   │   └── index.astro      # Página principal
-│   └── styles/              # Estilos globales
-│       └── global.css       # Estilos CSS globales
+│   └── styles/              # Estilos CSS
+│       ├── global.css       # Estilos globales
+│       ├── hero.css         # Estilos del componente Hero
+│       └── menu.css         # Estilos del menú desplegable
 └── package.json             # Dependencias y scripts
 ```
-
-Esta estructura facilita la organización del código y la separación de responsabilidades entre componentes.
 
 ## 🧞 Comandos
 
@@ -68,6 +70,9 @@ Todos los comandos se ejecutan desde la raíz del proyecto:
 ## 📱 Capturas de Pantalla
 
 
+[![Captura-de-pantalla-2025-05-13-164845.png](https://i.postimg.cc/PJSRgnJ5/Captura-de-pantalla-2025-05-13-164845.png)](https://postimg.cc/p5nCj7Kw)
+
+[![Captura-de-pantalla-2025-05-13-164855.png](https://i.postimg.cc/CM7XBk7p/Captura-de-pantalla-2025-05-13-164855.png)](https://postimg.cc/c6KXPKPF)
 
 ## 🚀 Instalación y Uso
 
