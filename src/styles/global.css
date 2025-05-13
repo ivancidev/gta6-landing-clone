@@ -32,7 +32,7 @@
 
 .reveal-text {
   position: absolute;
-  font-size: 6vw;
+  font-size: 6vw; /* Base font size using viewport width */
   font-weight: 900;
   color: white;
   opacity: 0;
@@ -47,6 +47,21 @@
   left: 0;
   line-height: 0.9;
   font-family: "GTAFont", sans-serif;
+}
+
+/* Responsive adjustments for reveal-text */
+@media (max-width: 768px) {
+  .reveal-text {
+    font-size: 13vw;
+    top: 10vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .reveal-text {
+    font-size: 12vw;
+    top: 15vh;
+  }
 }
 
 .characters-image {
@@ -83,6 +98,37 @@
   cursor: pointer;
 }
 
+/* Responsive header */
+@media (max-width: 768px) {
+  .header {
+    padding: 30px;
+  }
+
+  .rockstar-logo {
+    height: 18px;
+    margin-left: 10px;
+  }
+
+  .menu-btn {
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 20px;
+  }
+
+  .rockstar-logo {
+    height: 16px;
+    margin-left: 5px;
+  }
+
+  .menu-btn {
+    margin-right: 15px;
+  }
+}
+
 .g0abma6 {
   height: 5px;
   width: 22px;
@@ -115,14 +161,48 @@
   background-color: black;
 }
 
+/* Responsive adjustments for text-mask */
+@media (max-width: 768px) {
+  .text-mask {
+    font-size: 18vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-mask {
+    font-size: 22vw;
+  }
+}
+
 .theft-offset {
-  margin-left: 6%; 
+  margin-left: 6%;
   display: inline-block;
 }
 
 .auto-offset {
-  margin-left: 2%; 
+  margin-left: 2%;
   display: inline-block;
+}
+
+/* Responsive adjustments for the offsets */
+@media (max-width: 768px) {
+  .theft-offset {
+    margin-left: 4%;
+  }
+
+  .auto-offset {
+    margin-left: 1%;
+  }
+}
+
+@media (max-width: 480px) {
+  .theft-offset {
+    margin-left: 3%;
+  }
+
+  .auto-offset {
+    margin-left: 0.5%;
+  }
 }
 
 .text-mask-container {
@@ -210,6 +290,30 @@
   letter-spacing: 0.04em;
 }
 
+/* Responsive adjustments for release date */
+@media (max-width: 768px) {
+  .release-date {
+    font-size: 8vw;
+    letter-spacing: 0.03em;
+  }
+
+  .date-mask-container {
+    top: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .release-date {
+    font-size: 10vw;
+    letter-spacing: 0.02em;
+    line-height: 0.9;
+  }
+
+  .date-mask-container {
+    top: 50%;
+  }
+}
+
 .vi-logo-animated-container {
   position: absolute;
   top: 15%;
@@ -232,6 +336,33 @@
   object-fit: contain;
 }
 
+/* Responsive adjustments for VI logo */
+@media (max-width: 1024px) {
+  .vi-logo-animated {
+    width: 18%;
+  }
+}
+
+@media (max-width: 768px) {
+  .vi-logo-animated-container {
+    top: 20%;
+  }
+
+  .vi-logo-animated {
+    width: 25%;
+  }
+}
+
+@media (max-width: 480px) {
+  .vi-logo-animated-container {
+    top: 25%;
+  }
+
+  .vi-logo-animated {
+    width: 35%;
+  }
+}
+
 .trailer-button-container {
   position: absolute;
   bottom: 1%;
@@ -252,6 +383,29 @@
   color: white;
   text-decoration: none;
   transition: opacity 0.3s ease;
+}
+
+/* Responsive adjustments for trailer button */
+@media (max-width: 768px) {
+  .trailer-button-container {
+    bottom: 3%;
+  }
+
+  .trailer-button {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trailer-button-container {
+    bottom: 5%;
+  }
+
+  .trailer-button {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .trailer-button:hover {
@@ -280,6 +434,21 @@
   opacity: 0.9;
   text-align: center;
   white-space: nowrap;
+}
+
+/* Responsive adjustments for trailer text */
+@media (max-width: 768px) {
+  .trailer-text {
+    font-size: 9px;
+    letter-spacing: 0.8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trailer-text {
+    font-size: 8px;
+    letter-spacing: 0.5px;
+  }
 }
 
 /* Menu */
@@ -319,6 +488,37 @@
   justify-content: center;
 }
 
+/* Responsive menu adjustments */
+@media (max-width: 768px) {
+  .menu-container {
+    flex-direction: column;
+  }
+
+  .menu-left-side {
+    width: 100%;
+    height: 35%;
+  }
+
+  .menu-right-side {
+    width: 100%;
+    height: 65%;
+  }
+
+  .menu-background-image {
+    object-position: center top;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-left-side {
+    height: 30%;
+  }
+
+  .menu-right-side {
+    height: 70%;
+  }
+}
+
 .menu-header {
   width: 100%;
   display: flex;
@@ -341,6 +541,27 @@
   position: relative;
   z-index: 10;
   margin-right: 60px;
+}
+
+/* Responsive menu header */
+@media (max-width: 768px) {
+  .menu-header {
+    padding: 15px 20px;
+  }
+
+  .menu-close-btn {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-header {
+    padding: 12px 15px;
+  }
+
+  .menu-close-btn {
+    margin-right: 10px;
+  }
 }
 
 .menu-close-line {
@@ -367,6 +588,22 @@
   padding: 0 40px;
   justify-content: center;
   font-family: "Poppins", sans-serif;
+}
+
+/* Responsive menu content */
+@media (max-width: 768px) {
+  .menu-content {
+    padding: 0 30px;
+    justify-content: flex-start;
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-content {
+    padding: 0 20px;
+    margin-top: 40px;
+  }
 }
 
 .menu-nav-tabs {
@@ -399,6 +636,41 @@
   font-weight: bold;
 }
 
+/* Responsive menu nav tabs */
+@media (max-width: 768px) {
+  .menu-nav-tabs {
+    gap: 10px;
+    padding: 6px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu-item {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .menu-item.active {
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-nav-tabs {
+    gap: 5px;
+    padding: 4px 8px;
+  }
+
+  .menu-item {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .menu-item.active {
+    padding: 8px 14px;
+  }
+}
+
 .menu-item:hover {
   opacity: 1;
 }
@@ -424,4 +696,24 @@
 
 .character:hover {
   opacity: 1;
+}
+
+/* Responsive characters menu */
+@media (max-width: 768px) {
+  .menu-characters {
+    font-size: 32px;
+    max-width: 95%;
+    margin-top: 10px;
+  }
+
+  .character {
+    margin-bottom: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-characters {
+    font-size: 24px;
+    line-height: 1.1;
+  }
 }
