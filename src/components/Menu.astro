@@ -1,0 +1,40 @@
+---
+import MenuAnimation from './MenuAnimation';
+import '../styles/menu.css';
+---
+
+<div class="menu-container">
+  <div class="menu-left-side">
+    <img src="/fondo-menu.png" alt="Menu Background" class="menu-background-image">
+    <div class="menu-header">
+      <img src="/rockstar-logo.svg" alt="Rockstar Games" class="rockstar-logo">
+    </div>
+  </div>  <div class="menu-right-side">
+    <div class="menu-top-navigation">
+      <div class="menu-nav-tabs">
+        <div class="menu-item active">Personajes</div>
+        <div class="menu-item">Ubicaciones</div>
+        <div class="menu-item">Música</div>
+        <div class="menu-item">Vehículos</div>
+      </div>
+      <div class="menu-close-btn">
+        <div class="menu-close-line"></div>
+        <div class="menu-close-line"></div>
+      </div>
+    </div>
+    <div class="menu-content">
+      <div class="menu-characters">
+        <div class="character">Lucia Caminos</div>
+        <div class="character">Jason Duval</div>
+        <div class="character">Cal Hampton</div>
+        <div class="character">Raul Batista</div>
+        <div class="character">Real Dimez</div>
+        <div class="character">Brian O'Conner</div>
+        <div class="character">Liam Priest</div>
+        <div class="character">Boobie ike</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<MenuAnimation client:load />
