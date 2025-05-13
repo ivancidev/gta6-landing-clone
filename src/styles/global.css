@@ -1,0 +1,275 @@
+.hero-wrapper {
+  height: 300vh;
+  background: black;
+  position: relative;
+}
+
+.hero-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: black;
+  isolation: isolate;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* .background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+} */
+
+.reveal-text {
+  position: absolute;
+  font-size: 5vw;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: none;
+  will-change: opacity, transform;
+  pointer-events: none;
+  z-index: 2;
+  top: 10vh;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  line-height: 0.9;
+  letter-spacing: -3px;
+  font-family: "Arial", sans-serif;
+}
+
+.characters-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 3;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.rockstar-logo {
+  height: 20px;
+  margin-left: 20px;
+  filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.5));
+}
+
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  margin-right: 100px;
+  cursor: pointer;
+}
+
+.g0abma6 {
+  height: 5px;
+  width: 22px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+.text-mask {
+  font-size: 15vw;
+  font-weight: 900;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  line-height: 0.85;
+  letter-spacing: -5px;
+  font-family: "Arial", sans-serif;
+  color: white;
+  mix-blend-mode: difference;
+  z-index: 10;
+  pointer-events: none;
+  position: relative;
+  background-color: black;
+}
+
+.text-mask-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+  isolation: isolate;
+}
+
+.text-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-color: rgb(0, 0, 0);
+}
+
+.text-mask-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Inicialmente apilados */
+}
+
+.logo-date-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.date-mask-container {
+  position: absolute;
+  width: 100%;
+  overflow: hidden; /* Esto creará el efecto de máscara */
+  height: 0; /* Inicialmente sin altura */
+  display: flex;
+  justify-content: center;
+  top: 45%; /* Lo posicionamos debajo del logo VI más pequeño */
+  left: 0;
+  right: 0;
+  margin: 0 auto; /* Centrar horizontalmente */
+  background: black; /* Fondo negro para mejorar la visibilidad del texto con degradado */
+}
+
+.release-date {
+  font-size: 8vw; /* Aumentamos el tamaño para destacar más */
+  font-weight: 500; /* Bebas Neue luce mejor con peso normal */
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0;
+  line-height: 0.95; /* Líneas más juntas como en la imagen */
+  width: 100%;
+  position: relative; /* Cambiamos a relative para mejor control */
+  transform: translateY(100%); /* Inicialmente fuera del contenedor */
+  background: linear-gradient(
+    to bottom,
+    #ffa76a 20%,
+    #ff8d73 25%,
+    #ff7e7e 40%,
+    #f65f88 70%,
+    #e25a9b 50%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: none;
+  font-family: "Bebas Neue", "Oswald", "Impact", sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.vi-logo-animated-container {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 20;
+  pointer-events: none;
+  transform: translateY(0);
+}
+
+.vi-logo-animated {
+  width: 13%;
+  max-width: 450px;
+  transform-origin: center;
+  object-fit: contain;
+}
+
+.trailer-button-container {
+  position: absolute;
+  bottom: 1%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.trailer-button {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.trailer-button:hover {
+  opacity: 0.8;
+}
+
+.trailer-svg-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trailer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-family: "Arial", sans-serif;
+  font-weight: 300;
+  opacity: 0.9;
+  text-align: center;
+  white-space: nowrap;
+}
