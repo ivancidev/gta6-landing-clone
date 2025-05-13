@@ -1,5 +1,13 @@
+@font-face {
+  font-family: "GTAFont";
+  src: url("/fonts/Pricedown\ Bl.otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .hero-wrapper {
-  height: 300vh;
+  height: 200vh;
   background: black;
   position: relative;
 }
@@ -22,31 +30,23 @@
   height: 100%;
 }
 
-/* .background-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-} */
-
 .reveal-text {
   position: absolute;
-  font-size: 5vw;
+  font-size: 6vw;
   font-weight: 900;
   color: white;
-  text-transform: uppercase;
   opacity: 0;
   transform: scale(0.8);
   transition: none;
   will-change: opacity, transform;
   pointer-events: none;
   z-index: 2;
-  top: 10vh;
+  top: 5vh;
   text-align: center;
   width: 100%;
   left: 0;
   line-height: 0.9;
-  letter-spacing: -3px;
-  font-family: "Arial", sans-serif;
+  font-family: "GTAFont", sans-serif;
 }
 
 .characters-image {
@@ -103,18 +103,26 @@
 .text-mask {
   font-size: 15vw;
   font-weight: 900;
-  text-transform: uppercase;
   width: 100%;
   text-align: center;
-  line-height: 0.85;
-  letter-spacing: -5px;
-  font-family: "Arial", sans-serif;
+  line-height: 0.9;
+  font-family: "GTAFont", sans-serif;
   color: white;
   mix-blend-mode: difference;
   z-index: 10;
   pointer-events: none;
   position: relative;
   background-color: black;
+}
+
+.theft-offset {
+  margin-left: 6%; 
+  display: inline-block;
+}
+
+.auto-offset {
+  margin-left: 2%; 
+  display: inline-block;
 }
 
 .text-mask-container {
@@ -148,7 +156,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column; /* Inicialmente apilados */
+  flex-direction: column;
 }
 
 .logo-date-container {
@@ -164,27 +172,27 @@
 .date-mask-container {
   position: absolute;
   width: 100%;
-  overflow: hidden; /* Esto creará el efecto de máscara */
-  height: 0; /* Inicialmente sin altura */
+  overflow: hidden;
+  height: 0;
   display: flex;
   justify-content: center;
-  top: 45%; /* Lo posicionamos debajo del logo VI más pequeño */
+  top: 45%;
   left: 0;
   right: 0;
-  margin: 0 auto; /* Centrar horizontalmente */
-  background: black; /* Fondo negro para mejorar la visibilidad del texto con degradado */
+  margin: 0 auto;
+  background: black;
 }
 
 .release-date {
-  font-size: 8vw; /* Aumentamos el tamaño para destacar más */
-  font-weight: 500; /* Bebas Neue luce mejor con peso normal */
+  font-size: 7vw;
+  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
   opacity: 0;
-  line-height: 0.95; /* Líneas más juntas como en la imagen */
+  line-height: 0.95;
   width: 100%;
-  position: relative; /* Cambiamos a relative para mejor control */
-  transform: translateY(100%); /* Inicialmente fuera del contenedor */
+  position: relative;
+  transform: translateY(100%);
   background: linear-gradient(
     to bottom,
     #ffa76a 20%,
@@ -198,7 +206,7 @@
   -webkit-text-fill-color: transparent;
   color: transparent;
   text-shadow: none;
-  font-family: "Bebas Neue", "Oswald", "Impact", sans-serif;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 0.04em;
 }
 
@@ -232,7 +240,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 20;
+  z-index: 3;
 }
 
 .trailer-button {
@@ -358,6 +366,7 @@
   flex-direction: column;
   padding: 0 40px;
   justify-content: center;
+  font-family: "Poppins", sans-serif;
 }
 
 .menu-nav-tabs {
@@ -378,6 +387,7 @@
   opacity: 0.7;
   transition: opacity 0.3s ease;
   padding: 8px 15px;
+  font-family: "Poppins", sans-serif;
 }
 
 .menu-item.active {
