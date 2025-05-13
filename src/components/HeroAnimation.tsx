@@ -28,10 +28,6 @@ export default function HeroAnimation() {
       opacity: 0,
     });
 
-    gsap.set(".final-image", {
-      opacity: 0,
-    });
-
     gsap.set(".release-date", {
       opacity: 0,
     });
