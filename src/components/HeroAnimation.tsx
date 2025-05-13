@@ -37,7 +37,7 @@ export default function HeroAnimation() {
     });
     gsap.set(".text-mask", {
       scale: 3.5, 
-      opacity: 0, // Inicialmente invisible
+      opacity: 0, 
     }); 
     gsap.set(".date-mask-container", {
       height: 0, 
@@ -70,7 +70,7 @@ export default function HeroAnimation() {
     gsap.set(".reveal-text", {
       scale: 1,
       opacity: 1,
-    }); // 2. Desvanecer el texto normal y hacer transición al texto con máscara
+    }); 
 
     tl.to(
       [".reveal-text", ".trailer-button-container"],
@@ -82,7 +82,6 @@ export default function HeroAnimation() {
       ">"
     );
 
-    // 3. Mostrar el texto con efecto de máscara - inicialmente muy grande
     tl.to(
       ".text-mask-container",
       {
@@ -166,40 +165,26 @@ export default function HeroAnimation() {
     tl.to(
       ".release-date",
       {
-        y: 0, // Movemos el texto a su posición final
+        y: 0, 
         opacity: 1,
         duration: 1.5,
         ease: "power2.out",
       },
-      "<0.7" // Ligeramente después de que comience a expandirse el contenedor
-    ); // Pequeña pausa antes de añadir el logo VI (manteniendo la fecha)
-    tl.to(
-      {},
-      {
-        duration: 0.5, // Reducimos la pausa para hacer la transición más fluida
-      },
-      ">"
-    ); // Movemos el contenedor de fecha al centro de la pantalla
-    tl.to(
-      [".release-date", ".date-mask-container"],
-      {
-        scale: 1, // Mantenemos el tamaño original para mejor legibilidad
-        duration: 0.8,
-        ease: "power2.inOut",
-      },
-      ">"
-    ); // Desvanecemos el texto GTA más rápido para dar paso al logo VI
+      "<0.7" 
+    ); 
+    
+
     tl.to(
       ".text-mask",
       {
         opacity: 0,
         scale: 0,
-        y: "-30vh", // Movemos más arriba para que no interfiera con el logo VI
+        y: "-30vh", 
         duration: 0.8,
         ease: "power3.out",
       },
       "<0.2"
-    ); // Animamos la aparición del logo VI en la posición correcta
+    ); 
     tl.to(
       ".vi-logo-animated-container",
       {
