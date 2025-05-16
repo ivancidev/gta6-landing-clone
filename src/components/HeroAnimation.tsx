@@ -32,17 +32,17 @@ export default function HeroAnimation() {
       opacity: 0,
     });
     gsap.set(".text-mask", {
-      scale: 3.5, 
-      opacity: 0, 
-    }); 
+      scale: 3.5,
+      opacity: 0,
+    });
     gsap.set(".date-mask-container", {
-      height: 0, 
+      height: 0,
     });
 
     gsap.set(".release-date", {
       opacity: 0,
-      y: 150, 
-    }); 
+      y: 150,
+    });
     gsap.set(".background-image", {
       scale: 1.2,
     });
@@ -66,7 +66,7 @@ export default function HeroAnimation() {
     gsap.set(".reveal-text", {
       scale: 1,
       opacity: 1,
-    }); 
+    });
 
     tl.to(
       [".reveal-text", ".trailer-button-container"],
@@ -93,12 +93,12 @@ export default function HeroAnimation() {
       {
         scale: 3.5,
         opacity: 1,
-        y: 0, 
+        y: 0,
       },
       {
         scale: 1,
         opacity: 1,
-        y: 0, 
+        y: 0,
         duration: 1.5,
         ease: "power3.out",
       },
@@ -124,13 +124,13 @@ export default function HeroAnimation() {
         duration: 0.5,
       },
       ">"
-    ); 
+    );
     tl.to(
       ".text-mask",
       {
-        scale: 0.25, 
-        y: "-25vh", 
-        x: 0, 
+        scale: 0.25,
+        y: "-25vh",
+        x: 0,
         duration: 1.2,
         ease: "power2.inOut",
       },
@@ -140,71 +140,83 @@ export default function HeroAnimation() {
     tl.to(
       ".background-image",
       {
-        scale: 0, 
+        scale: 0,
         y: "-10vh",
         duration: 1.5,
         ease: "power2.inOut",
       },
       "<"
-    ); 
+    );
 
     tl.to(
       ".date-mask-container",
       {
-        height: "50vh", 
+        height: "50vh",
         duration: 1.2,
         ease: "power1.inOut",
       },
-      "<0.2" 
-    ); 
-    
+      "<0.2"
+    );
+
     tl.to(
       ".release-date",
       {
-        y: 0, 
+        y: 0,
         opacity: 1,
         duration: 1.5,
         ease: "power2.out",
       },
-      "<0.7" 
-    ); 
-    
+      "<0.7"
+    );
 
     tl.to(
       ".text-mask",
       {
         opacity: 0,
         scale: 0,
-        y: "-30vh", 
+        y: "-30vh",
         duration: 0.8,
         ease: "power3.out",
       },
       "<0.2"
-    ); 
+    );
     tl.to(
       ".vi-logo-animated-container",
       {
         opacity: 1,
         scale: 1,
-        y: "-5vh", 
+        y: "-5vh",
         duration: 1.5,
-        ease: "elastic.out(1, 0.4)", 
+        ease: "elastic.out(1, 0.4)",
       },
-      "<0.3" 
+      "<0.3"
     );
 
     tl.set(
       ".trailer-button-container",
       {
         opacity: 0,
-        display: "none", 
+        display: "none",
       },
       "<"
     );
 
+    const hideLoading = () => {
+      const overlay = document.getElementById("loading-overlay");
+      if (overlay) {
+        overlay.style.opacity = "0";
+        setTimeout(() => {
+          overlay.style.display = "none";
+        }, 400);
+      }
+    };
+    window.addEventListener("load", hideLoading);
+    setTimeout(hideLoading, 1200);
+
     return () => {
       ScrollTrigger.getAll().forEach((t) => t.kill());
       lenis.destroy();
+      window.removeEventListener("load", hideLoading);
     };
   }, []);
 }

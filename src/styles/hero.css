@@ -24,7 +24,7 @@
 
 .reveal-text {
   position: absolute;
-  font-size: 6vw; 
+  font-size: 6vw;
   font-weight: 900;
   color: white;
   opacity: 0;
@@ -362,5 +362,37 @@
   .trailer-text {
     font-size: 10px;
     letter-spacing: 0.5px;
+  }
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease;
+}
+
+.spinner {
+  border: 8px solid #222;
+  border-top: 8px solid #ff7e7e;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
