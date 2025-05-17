@@ -22,16 +22,16 @@ El proyecto está organizado de la siguiente manera:
 /
 ├── public/                  # Archivos estáticos
 │   ├── favicon.svg
-│   ├── fondo-menu.png       # Fondo del menú desplegable
-│   ├── fondo-original.png   # Imagen de fondo principal
-│   ├── hero-gt6-sin-fondo.png # Personajes principales sin fondo
-│   ├── rockstar-logo.svg    # Logo de Rockstar Games
-│   ├── trailer-logo.svg     # Icono del botón de trailer
-│   ├── vi.webp              # Logo del VI animado
 │   └── fonts/               # Fuentes personalizadas
 │       └── Pricedown Bl.otf # Fuente similar a la de GTA
 ├── src/
-│   ├── assets/              # Recursos internos
+│   ├── assets/              # Imágenes y recursos internos
+│   │   ├── fondo-menu.png
+│   │   ├── fondo-original.png
+│   │   ├── hero-gt6-sin-fondo.png
+│   │   ├── rockstar-logo.svg
+│   │   ├── trailer-logo.svg
+│   │   └── vi.webp
 │   ├── components/          # Componentes de la aplicación
 │   │   ├── Hero.astro       # Componente principal de la landing
 │   │   ├── Menu.astro       # Estructura del menú desplegable
@@ -45,7 +45,8 @@ El proyecto está organizado de la siguiente manera:
 │       ├── global.css       # Estilos globales
 │       ├── hero.css         # Estilos del componente Hero
 │       └── menu.css         # Estilos del menú desplegable
-└── package.json             # Dependencias y scripts
+├── package.json             # Dependencias y scripts
+└── README.md                # Documentación del proyecto
 ```
 
 ## 🧞 Comandos
@@ -68,7 +69,6 @@ Todos los comandos se ejecutan desde la raíz del proyecto:
 - [TypeScript](https://www.typescriptlang.org/) - JavaScript tipado
 
 ## 📱 Capturas de Pantalla
-
 
 [![Captura-de-pantalla-2025-05-13-164845.png](https://i.postimg.cc/PJSRgnJ5/Captura-de-pantalla-2025-05-13-164845.png)](https://postimg.cc/p5nCj7Kw)
 
@@ -96,5 +96,3 @@ Todos los comandos se ejecutan desde la raíz del proyecto:
    ```
 
 4. Abre [http://localhost:4321](http://localhost:4321) en tu navegador
-
-
