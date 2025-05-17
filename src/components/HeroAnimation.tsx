@@ -55,7 +55,7 @@ export default function HeroAnimation() {
       scrollTrigger: {
         trigger: ".hero-wrapper",
         start: "top top",
-        end: "bottom top",
+        end: "+=100%",
         scrub: true,
         pin: true,
         pinSpacing: true,
