@@ -1,6 +1,5 @@
 .hero-wrapper {
-  height: 200vh;
-  background: black;
+  height: 100vh;
   position: relative;
 }
 
@@ -24,7 +23,7 @@
 
 .reveal-text {
   position: absolute;
-  font-size: 6vw; 
+  font-size: 6vw;
   font-weight: 900;
   color: white;
   opacity: 0;
@@ -343,9 +342,9 @@
   transform: translate(-50%, -50%);
   text-transform: uppercase;
   font-size: 13px;
-  letter-spacing: 3px;
-  font-family: "Arial", sans-serif;
-  font-weight: bold;
+  letter-spacing: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   opacity: 0.9;
   text-align: center;
   white-space: nowrap;
@@ -354,13 +353,45 @@
 @media (max-width: 768px) {
   .trailer-text {
     font-size: 12px;
-    letter-spacing: 0.8px;
+    letter-spacing: 3px;
   }
 }
 
 @media (max-width: 480px) {
   .trailer-text {
     font-size: 10px;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+  }
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease;
+}
+
+.spinner {
+  border: 8px solid #222;
+  border-top: 8px solid #ff7e7e;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

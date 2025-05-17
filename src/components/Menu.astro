@@ -1,15 +1,15 @@
 ---
 import MenuAnimation from './MenuAnimation';
 import '../styles/menu.css';
+import { Image } from 'astro:assets';
+import fondoMenu from '../assets/fondo-menu.png';
 ---
 
 <div class="menu-container">
   <div class="menu-left-side">
-    <img src="/fondo-menu.png" alt="Menu Background" class="menu-background-image">
-    <div class="menu-header">
-      <img src="/rockstar-logo.svg" alt="Rockstar Games" class="rockstar-logo">
-    </div>
-  </div>  <div class="menu-right-side">
+    <Image src={fondoMenu} alt="Menu Background" class="menu-background-image" loading="eager" />
+  </div>  
+  <div class="menu-right-side">
     <div class="menu-top-navigation">
       <div class="menu-nav-tabs">
         <div class="menu-item active">Personajes</div>
