@@ -2,10 +2,16 @@
 import HeroAnimation from './HeroAnimation';
 import '../styles/global.css';
 import '../styles/hero.css';
+import { Image } from 'astro:assets';
+import fondoOriginal from '../assets/fondo-original.png';
+import heroGt6SinFondo from '../assets/hero-gt6-sin-fondo.png';
+import viLogo from '../assets/vi.webp';
+import rockstarLogo from '../assets/rockstar-logo.svg';
+import trailerLogo from '../assets/trailer-logo.svg';
 ---
 
 <div class="header">
-  <img src="/rockstar-logo.svg" alt="Rockstar Games" class="rockstar-logo" />
+  <Image src={rockstarLogo} alt="Rockstar Games" class="rockstar-logo" loading="eager" />
   <div class="menu-btn">
     <div class="g0abma6"></div>
     <div class="g0abma6"></div>
@@ -14,8 +20,8 @@ import '../styles/hero.css';
 
 <div class="hero-wrapper">  
   <div class="hero-container">
-    <img src="/fondo-original.png" class="background-image" alt="Background image GTA6">
-    <img src="/hero-gt6-sin-fondo.png" class="characters-image" alt="GTA VI characters">
+    <Image src={fondoOriginal} class="background-image" alt="GTA VI background" loading="eager" />
+    <Image src={heroGt6SinFondo} class="characters-image" alt="GTA VI characters" loading="eager" />
     <div class="reveal-text">
       grand<br><span class="theft-offset">theft</span><br><span class="auto-offset">auto</span>
     </div>       
@@ -34,14 +40,15 @@ import '../styles/hero.css';
     </div>
     
     <div class="vi-logo-animated-container">
-      <img src="/vi.webp" alt="GTA VI Logo" class="vi-logo-animated">
-    </div>      <div class="trailer-button-container">
-      <a href="#" class="trailer-button">
+      <Image src={viLogo} alt="GTA VI Logo" class="vi-logo-animated" loading="eager" />
+    </div>
+    <div class="trailer-button-container">
+      <div class="trailer-button">
         <div class="trailer-svg-container">
-          <img src="/trailer-logo.svg" alt="Trailer Logo" width="120" height="120" class="trailer-svg-image" />
+          <Image src={trailerLogo} alt="Trailer Logo" width="120" height="120" class="trailer-svg-image" loading="eager" />
           <span class="trailer-text">Ver el trailer 2</span>
         </div>
-      </a>
+      </div>
     </div>
     
   </div>
